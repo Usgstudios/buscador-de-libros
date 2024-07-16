@@ -105,13 +105,13 @@ public class Principal {
             }else {
                 // Guardar el autor asociado al libro
                 if (!libro.autor().isEmpty()) {
-                    DatosAutorModel autor = libro.autor().get(0); // Obtener el primer autor del libro
+                    DatosAutorModel autor = libro.autor().get(0);
                     AutorModel autorModel = new AutorModel();
                     autorModel.setNombre(autor.nombre());
                     autorModel.setNacimiento(autor.fechaDeNacimiento());
                     autorModel.setMuerte(autor.fechaDeMuerte());
-                    autorModel.setLibros(libroModel); // Establecer la relación con el libro guardado
-                    autorRepository.save(autorModel); // Guardar el autor en la base de datos
+                    autorModel.setLibros(libroModel);
+                    autorRepository.save(autorModel);
                 }
             }
 
